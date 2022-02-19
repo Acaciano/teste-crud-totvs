@@ -18,15 +18,15 @@ Instruções para instalação do banco de dados:
 
 Instruções para Rodar Back-end:
 
-1 - Abra o projeto que consta na pasta back-end no seu Visual Studio
-2 - Clica no play para rodar o projeto
+    1 - Abra o projeto que consta na pasta back-end no seu Visual Studio
+    2 - Clica no play para rodar o projeto
 
 
 Instruções para Rodar Front-end:
 
-1 - Instalação do Node(https://nodejs.org/en/)
-2 - Instalação do angular cli com o comando: npm install -g @angular/cli
-3 - Abra o projeto que consta na pasta front-end no seu vsCode
-4 - Executar o comando ng serve para subir o projeto
-5 - Acesse o endereço no seu navegador http://localhost:4200
+    1 - Instalação do Node(https://nodejs.org/en/)
+    2 - Instalação do angular cli com o comando: npm install -g @angular/cli
+    3 - Abra o projeto que consta na pasta front-end no seu vsCode
+    4 - Executar o comando ng serve para subir o projeto
+    5 - Acesse o endereço no seu navegador http://localhost:4200
 
