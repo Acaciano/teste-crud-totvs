@@ -19,7 +19,7 @@ Instruções para instalação do banco de dados:
 Instruções para Rodar Back-end:
 
     1 - Abra o projeto que consta na pasta back-end no seu Visual Studio
-    2 - Clica no play para rodar o projeto
+    2 - Clicar no play para rodar o projeto
 
 
 Instruções para Rodar Front-end:
