@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = EssenceIT.API
+build_property.ProjectDir = C:\Projects\cbyk\back-end\src\api\

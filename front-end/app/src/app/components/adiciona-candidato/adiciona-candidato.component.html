@@ -1,0 +1,33 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">Nome</label>
+        <input type="text" class="form-control" id="title" required [(ngModel)]="candidato.nome" name="title" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">CPF</label>
+        <input type="number" class="form-control" id="description" required [(ngModel)]="candidato.cpf" name="cpf" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">E-mail</label>
+        <input class="form-control" id="description" required [(ngModel)]="candidato.email" name="email" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Idade</label>
+        <input type="number" class="form-control" id="idade" required [(ngModel)]="candidato.idade" name="idade" />
+      </div>
+
+      <br>
+      <button (click)="saveCandidato()" class="btn btn-success">Salvar</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>O candidato foi cadastrado com sucesso!</h4>
+      <button class="btn btn-success" (click)="newCandidato()">Adicionar</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Pesquisar por título" [(ngModel)]="search" />
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" (click)="searchContatos()">
+          Buscar
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h4>Lista de candidatos</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let candidato of candidatos; let i = index" [class.active]="i == currentIndex"
+        (click)="setActivecandidato(candidato, i)">
+        {{ candidato.nome }}
+      </li>
+    </ul>
+
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="candidatoAtual">
+      <h4>Candidatos</h4>
+      <div>
+        <label><strong>Nome:</strong></label> {{ candidatoAtual.nome }}
+      </div>
+      <div>
+        <label><strong>CPF:</strong></label>
+        {{ candidatoAtual.cpf }}
+      </div>
+
+      <div>
+        <label><strong>E-mail:</strong></label>
+        {{ candidatoAtual.email }}
+      </div>
+
+      <div>
+        <label><strong>Idade:</strong></label>
+        {{ candidatoAtual.idade }}
+      </div>
+
+      <a class="badge badge-warning" routerLink="/candidatos/{{ candidatoAtual.id }}">
+        Editar
+      </a>
+
+      <button class="m-3 btn btn-sm btn-danger" (click)="deleteCandidato(candidatoAtual.id)">
+        Apagar
+      </button>
+
+    </div>
+
+    <div *ngIf="!candidatoAtual">
+      <br />
+      <p>Por favor, clique em um candidato</p>
+    </div>
+  </div>
+</div>

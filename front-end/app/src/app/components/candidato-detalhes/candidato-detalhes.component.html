@@ -1,0 +1,39 @@
+<div>
+  <div *ngIf="currentCandidatos.id" class="edit-form">
+    <h4>Candidatos</h4>
+    <form>
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="currentCandidatos.nome" name="nome" />
+      </div>
+      <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input type="number" class="form-control" id="cpf" [(ngModel)]="currentCandidatos.cpf" name="cpf" />
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="text" class="form-control" id="email" [(ngModel)]="currentCandidatos.email" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="idade">Idade</label>
+        <input type="number" class="form-control" id="idade" [(ngModel)]="currentCandidatos.idade" name="idade" />
+      </div>
+    </form>
+
+    <button type="submit" class="badge badge-success mb-2 btn-editar" (click)="updateCandidato()">
+      Editar
+    </button>
+
+    <a class="badge badge-warning" routerLink="/candidatos">
+      Voltar
+    </a>
+
+    <br>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentCandidatos.id">
+    <br />
+    <p>Não é possível acessar este candidato...</p>
+  </div>
+</div>
